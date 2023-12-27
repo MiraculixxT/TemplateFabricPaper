@@ -1,7 +1,7 @@
 # Fabric, Paper Template
 
 <!-- modrinth_exclude.start -->
-### [DOWNLOAD](https://modrinth.com/plugin/template)
+### [DOWNLOAD](https://modrinth.com/plugin/template) (placeholder)
 <!-- modrinth_exclude.end -->
 
 This is a simple template for creating a Fabric and Paper project, supporting both loaders.
