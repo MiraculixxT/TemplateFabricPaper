@@ -8,6 +8,11 @@ repositories {
     maven("https://maven.shedaniel.me/")
     maven("https://maven.terraformersmc.com/releases/")
     maven("https://oss.sonatype.org/content/repositories/snapshots")
+
+    maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+        name = "sonatype-oss-snapshots1"
+        mavenContent { snapshotsOnly() }
+    }
 }
 
 val transitiveInclude: Configuration by configurations.creating {
@@ -23,7 +28,7 @@ dependencies {
     //
     // Fabric configuration
     //
-    minecraft("com.mojang", "minecraft", gameVersion)
+    minecraft("com.mojang:minecraft:$gameVersion")
     mappings(loom.officialMojangMappings())
     modImplementation("net.fabricmc", "fabric-loader", outlet.loaderVersion())
     modImplementation("net.fabricmc.fabric-api", "fabric-api", outlet.fapiVersion())
@@ -82,7 +87,7 @@ tasks.processResources {
             mapOf(
                 "modid" to properties["modid"] as String,
                 "version" to version,
-                "name" to properties["name"] as String,
+                "name" to properties["projectName"] as String,
                 "description" to description,
                 "author" to properties["authors"] as String,
                 "license" to properties["license"] as String,

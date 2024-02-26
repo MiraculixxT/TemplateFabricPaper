@@ -4,7 +4,7 @@ plugins {
 
 modrinth {
     token.set(properties["modrinthToken"] as String)
-    projectId.set(properties["modrinthProjectId"] as? String ?: properties["name"] as String)
+    projectId.set(properties["modrinthProjectId"] as? String ?: properties["projectName"] as String)
     versionNumber.set(version as String)
     versionType.set(properties["publishState"] as String)
 
