@@ -11,7 +11,7 @@ import me.shedaniel.autoconfig.annotation.Config;
  * Only use on client side mods
  */
 @Config(name = "firstTemplate")
-public class AlwaysSnowAutoConfig implements ConfigData {
+public class TemplateAutoConfig implements ConfigData {
 
     public boolean value1 = true;
     public String value2 = "Hey";
